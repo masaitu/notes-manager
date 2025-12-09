@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div>
+        <p class="eyebrow">Notes Manager</p>
+        <h1>Capture quick thoughts</h1>
+        <p class="lede">Add notes, keep them on refresh, and clear them out when you are done.</p>
+      </div>
+      <form id="note-form" class="note-form" autocomplete="off" method="post">
+        <label class="note-form__label" for="note-input">Add a note</label>
+        <div class="note-form__row">
+          <input id="note-input" name="note" class="note-form__input" placeholder="Type something to remember" required />
+          <button type="submit" class="btn">Add</button>
+        </div>
+      </form>
+    </header>
+
+    <section class="notes" aria-live="polite">
+      <div class="notes__header">
+        <h2>Your notes</h2>
+        <button class="btn btn--ghost" id="clear-notes" type="button">Clear all</button>
+      </div>
+      <ul id="notes-list" class="notes__list"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
